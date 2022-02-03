@@ -23,7 +23,7 @@ namespace BaconsaleWebApp.Migrations
                 name: "responses",
                 columns: table => new
                 {
-                    AppID = table.Column<int>(nullable: false)
+                    ApplicationId = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Title = table.Column<string>(nullable: false),
                     Year = table.Column<int>(nullable: false),
@@ -36,7 +36,7 @@ namespace BaconsaleWebApp.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_responses", x => x.AppID);
+                    table.PrimaryKey("PK_responses", x => x.ApplicationId);
                     table.ForeignKey(
                         name: "FK_responses_Categories_CategoryId",
                         column: x => x.CategoryId,
@@ -87,17 +87,17 @@ namespace BaconsaleWebApp.Migrations
 
             migrationBuilder.InsertData(
                 table: "responses",
-                columns: new[] { "AppID", "CategoryId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
+                columns: new[] { "ApplicationId", "CategoryId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
                 values: new object[] { 1, 1, "Joss Whedon", false, null, null, "PG-13", "Avengers, The", 2012 });
 
             migrationBuilder.InsertData(
                 table: "responses",
-                columns: new[] { "AppID", "CategoryId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
+                columns: new[] { "ApplicationId", "CategoryId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
                 values: new object[] { 2, 1, "Tim Burton", false, null, null, "PG-13", "Batman", 1989 });
 
             migrationBuilder.InsertData(
                 table: "responses",
-                columns: new[] { "AppID", "CategoryId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
+                columns: new[] { "ApplicationId", "CategoryId", "Director", "Edited", "LentTo", "Notes", "Rating", "Title", "Year" },
                 values: new object[] { 3, 1, "Christopher Nolan", false, null, null, "PG-13", "Dark Knight, The", 2008 });
 
             migrationBuilder.CreateIndex(

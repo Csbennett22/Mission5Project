@@ -9,12 +9,14 @@
 </head>
 <body>
     <div>
-        <!--list of links to other pages-->
-        <a asp-controller="Home" asp-action="Index">Home</a>
-        <a asp-controller="Home" asp-action="Movies">New Movie Form</a>
-        <a asp-controller="Home" asp-action="MovieList">See Movie List</a>
-        <a href="https://baconsale.com/">My Podcasts</a>
-        <br />
+        <nav class="navbar navbar-light bg-light">
+            <!--list of links to other pages-->
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="Movies">New Movie Form</a>
+            <a asp-controller="Home" asp-action="MovieList">See Movie List</a>
+            <a href="https://baconsale.com/">My Podcasts</a>
+            <br />
+        </nav>
     </div>
     <div>
         @RenderBody()

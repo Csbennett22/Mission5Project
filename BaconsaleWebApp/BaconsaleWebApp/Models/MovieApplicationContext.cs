@@ -33,7 +33,7 @@ namespace BaconsaleWebApp.Models
 
                 new ApplicationResponse
                 {
-                    AppID = 1,
+                    ApplicationId = 1,
                     CategoryId = 1,
                     Title = "Avengers, The",
                     Year = 2012,
@@ -44,7 +44,7 @@ namespace BaconsaleWebApp.Models
                 },
                 new ApplicationResponse
                 {
-                    AppID = 2,
+                    ApplicationId = 2,
                     CategoryId = 1,
                     Title = "Batman",
                     Year = 1989,
@@ -53,7 +53,7 @@ namespace BaconsaleWebApp.Models
                 },
                 new ApplicationResponse
                 {
-                    AppID = 3,
+                    ApplicationId = 3,
                     CategoryId = 1,
                     Title = "Dark Knight, The",
                     Year = 2008,

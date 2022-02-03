@@ -57,7 +57,7 @@ namespace BaconsaleWebApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{movieid?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

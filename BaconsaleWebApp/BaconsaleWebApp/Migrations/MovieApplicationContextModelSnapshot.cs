@@ -17,7 +17,7 @@ namespace BaconsaleWebApp.Migrations
 
             modelBuilder.Entity("BaconsaleWebApp.Models.ApplicationResponse", b =>
                 {
-                    b.Property<int>("AppID")
+                    b.Property<int>("ApplicationId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -49,7 +49,7 @@ namespace BaconsaleWebApp.Migrations
                     b.Property<int>("Year")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("AppID");
+                    b.HasKey("ApplicationId");
 
                     b.HasIndex("CategoryId");
 
@@ -58,7 +58,7 @@ namespace BaconsaleWebApp.Migrations
                     b.HasData(
                         new
                         {
-                            AppID = 1,
+                            ApplicationId = 1,
                             CategoryId = 1,
                             Director = "Joss Whedon",
                             Edited = false,
@@ -68,7 +68,7 @@ namespace BaconsaleWebApp.Migrations
                         },
                         new
                         {
-                            AppID = 2,
+                            ApplicationId = 2,
                             CategoryId = 1,
                             Director = "Tim Burton",
                             Edited = false,
@@ -78,7 +78,7 @@ namespace BaconsaleWebApp.Migrations
                         },
                         new
                         {
-                            AppID = 3,
+                            ApplicationId = 3,
                             CategoryId = 1,
                             Director = "Christopher Nolan",
                             Edited = false,

@@ -57,37 +57,29 @@ namespace BaconsaleWebApp.Controllers
 
 
         }
-
         [HttpGet]
         public IActionResult Edit (int applicationid)
         {
             ViewBag.Categories = daContext.Categories.ToList();
 
-            var movie = daContext.responses.Single(x => x.AppID == applicationid);
-            return View(movie);
+            var application = daContext.responses.Single(x => x.ApplicationId == applicationid);
+
+            return View("Movies", application);
         }
         [HttpPost]
-        public IActionResult Edit(ApplicationResponse edit)
+        public IActionResult Edit (ApplicationResponse aredit)
         {
-            //if (ModelState.IsValid)
-            //{ 
-                daContext.Update(edit);
-                daContext.SaveChanges();
+            daContext.Update(aredit);
+            daContext.SaveChanges();
 
-                return RedirectToAction("MovieList");
-            //}
-            //else
-            //{
-            //    ViewBag.Categories = daContext.Categories.ToList();
-            //    return View("Movies");
-            //}
+            return RedirectToAction("MovieList");
         }
 
 
         [HttpGet]
         public IActionResult Delete (int applicationid)
         {
-            var movie = daContext.responses.Single(x => x.AppID == applicationid);
+            var movie = daContext.responses.Single(x => x.ApplicationId == applicationid);
             return View(movie);
         }
         [HttpPost]

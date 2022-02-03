@@ -13,7 +13,7 @@ namespace BaconsaleWebApp.Models
     {
         [Key]
         [Required]
-        public int AppID { get; set; }
+        public int ApplicationId { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
